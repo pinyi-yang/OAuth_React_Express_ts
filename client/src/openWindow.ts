@@ -20,6 +20,7 @@ function opeNewAuthWindow(myUrl: string): Promise<IUser> {
 
       if (msg.data.payload) {
         try {
+          console.log('user from back at auth window: ', JSON.parse(msg.data.payload));
           resolve(JSON.parse(msg.data.payload))
         }
         catch(err) {

@@ -22,7 +22,7 @@ db.once('open', () => {
   console.log('Connected to mongo');
 })
 
-db.on('eeror', (err) => {
+db.on('error', (err) => {
   console.log('An error occured: ', err);
 })
 

@@ -34,6 +34,7 @@ const App: React.FC = () => {
     // specify the type of data returned
     var message: Promise<IUser> = openNewAuthWindow('/auth/github');
     message.then(response => {
+      console.log('User at React from Auth Windows: ', response);
       setUser(response);
     }).catch(err => {
       console.log(err);
